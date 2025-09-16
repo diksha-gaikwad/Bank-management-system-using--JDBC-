@@ -1,0 +1,139 @@
+# 🏦 Bank Management System (Console-based Java Application)
+
+[![Java](https://img.shields.io/badge/Java-24-blue)](https://www.oracle.com/java/)
+[![MySQL](https://img.shields.io/badge/MySQL-8.x-green)](https://www.mysql.com/)
+
+
+A simple **console-based Bank Management System** built with **Java**, **JDBC**, and **MySQL**, demonstrating CRUD operations in a menu-driven interface.
+
+---
+
+## 📌 Features
+- Create new bank accounts
+- View all accounts
+- Update account balances
+- Delete accounts
+- Console-based interactive menu
+- Uses **JDBC** for database operations
+
+---
+
+## 🛠️ Technologies Used
+- **Java 24**
+- **MySQL 8.x**
+- **JDBC (Java Database Connectivity)**
+- **Maven** (for dependency management)
+- **IntelliJ IDEA** (IDE)
+
+---
+
+## ⚡ Setup Instructions
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/YOUR_USERNAME/bank-management.git
+cd bank-management
+
+
+2. Install Java & MySQL
+
+Ensure JDK 24 is installed and JAVA_HOME is set.
+
+Install MySQL and ensure the service is running.
+
+3. Create Database & Table
+CREATE DATABASE bankdb;
+USE bankdb;
+
+CREATE TABLE accounts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    balance DOUBLE NOT NULL
+);
+
+4. Update Database Credentials
+
+In AccountDAO.java:
+
+private final String url = "jdbc:mysql://localhost:3306/bankdb";
+private final String user = "root";
+private final String password = "Mrunali@123#";
+
+5. Maven Dependencies
+
+Add MySQL Connector in pom.xml:
+
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.1.1</version>
+</dependency>
+
+6. Run the Project
+
+Open IntelliJ IDEA → BankApp.java → Run
+
+Use the console menu to interact with the system.
+
+🗄️ Database Schema
+
+Table: accounts
+
+Column	Type	Description
+id	INT	Primary Key, Auto Increment
+name	VARCHAR(100)	Account holder name
+email	VARCHAR(100)	Account email
+balance	DOUBLE	Current balance
+🎮 Usage
+
+Console Menu Example:
+
+--- Bank Management ---
+1. Create Account
+2. View All Accounts
+3. Update Balance
+4. Delete Account
+5. Exit
+Enter choice:
+
+
+Sample Flow:
+
+Create Account → Enter name, email, initial balance
+
+View Accounts → Display all accounts
+
+Update Balance → Enter account ID and new balance
+
+Delete Account → Enter account ID to delete
+
+Exit → Close the application
+
+🗂️ Project Structure
+newproject/
+├── pom.xml                   # Maven configuration
+├── src/
+│   └── main/java/org/example/
+│       ├── dao/              # Database operations
+│       │   └── AccountDAO.java
+│       ├── model/            # Data models
+│       │   └── Account.java
+│       └── main/             # Console application
+│           └── BankApp.java
+
+🚀 Future Enhancements
+
+Input validation (email format, balance > 0)
+
+Exception handling for DB errors
+
+Transaction management for transfers between accounts
+
+Logging using log4j or java.util.logging
+
+GUI version for better user experience
+
+✨ Screenshots: 
+**Menu Display**
+![Menu](screenshots/Screenshot 2025-09-16 134019.png)
