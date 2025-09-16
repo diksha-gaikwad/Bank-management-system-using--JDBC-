@@ -31,7 +31,7 @@ A simple **console-based Bank Management System** built with **Java**, **JDBC**,
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/bank-management.git
+git clone https://github.com/diksha-gaikwad/Bank-management-system-using--JDBC-/
 cd bank-management
 
 
@@ -133,6 +133,7 @@ Transaction management for transfers between accounts
 Logging using log4j or java.util.logging
 
 GUI version for better user experience
+
 
 
 
