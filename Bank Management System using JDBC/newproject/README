@@ -58,7 +58,7 @@ In AccountDAO.java:
 
 private final String url = "jdbc:mysql://localhost:3306/bankdb";
 private final String user = "root";
-private final String password = "Mrunali@123#";
+private final String password = "12345";
 
 5. Maven Dependencies
 
@@ -133,6 +133,7 @@ Transaction management for transfers between accounts
 Logging using log4j or java.util.logging
 
 GUI version for better user experience
+
 
 
 
